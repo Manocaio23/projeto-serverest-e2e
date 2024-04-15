@@ -5,7 +5,7 @@ on:
     inputs:
       spec:
         description: Run by cypress command line
-        default: '**/*.spec.js' 
+        default: 'cypress/e2e/**/*.js' 
 
 jobs:
   cypress-e2e-chrome:
