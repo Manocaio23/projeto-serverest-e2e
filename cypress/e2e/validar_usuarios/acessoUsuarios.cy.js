@@ -17,7 +17,7 @@ describe('Teste de Login', () => {
         cy.acessar_site();
         cy.get('button[type="submit"]').click();
         cy.get(':nth-child(3) > :nth-child(2)').should('be.visible').should('contain.text', 'Email é obrigatório');
-        cy.get(':nth-child(3) > :nth-child(2)').should('be.visible').should('contain.text', 'Password é obrigatório');
+        cy.get(':nth-child(4) > :nth-child(2)').should('be.visible').should('contain.text', 'Password é obrigatório');
         });
     
    })

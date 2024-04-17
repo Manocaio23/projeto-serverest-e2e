@@ -2,12 +2,12 @@
 import { faker } from '@faker-js/faker';
 
 Cypress.Commands.add('acessar_site', () => {
-  cy.visit('https://front.serverest.dev/login');
+  cy.visit('/');
 
 });
 
 Cypress.Commands.add('fazerLoginADM', () => {
-    cy.visit('https://front.serverest.dev/login');
+    cy.visit('/');
     cy.get('#email').type('usarioadm@outlook.com');
     cy.get('#password').type('teste');
     cy.get('button[type="submit"]').click();
@@ -18,7 +18,7 @@ Cypress.Commands.add('fazerLoginADM', () => {
 
 
   Cypress.Commands.add('fazerLoginNaoADM', () => {
-    cy.visit('https://front.serverest.dev/login');
+    cy.visit('/');
     cy.get('#email').type('testenaoadm@outlook.com');
     cy.get('#password').type('teste');
     cy.get('button[type="submit"]').click();
@@ -27,7 +27,7 @@ Cypress.Commands.add('fazerLoginADM', () => {
   });
 
   Cypress.Commands.add('Criar_usuario', (randomName,randomEmail) => {
-    cy.visit('https://front.serverest.dev/login');
+    cy.visit('/');
       
 
       cy.get('[data-testid="cadastrar"]').click();
